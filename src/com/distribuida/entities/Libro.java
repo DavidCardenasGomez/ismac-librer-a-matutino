@@ -44,7 +44,7 @@ public class Libro {
 		this.portada = portada;
 		this.presentacion = presentacion;
 		this.precio = precio;
-		this.id_categoria = id_categoria;
+		this.id_categoria = id_categoria;    
 		this.id_autor = id_autor;
 		this.facturadetalle = factura_detalle;
 	}
