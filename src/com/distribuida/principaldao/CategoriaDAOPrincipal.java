@@ -21,8 +21,8 @@ public class CategoriaDAOPrincipal {
         //categoriaDAO.add(categoria);  // Descomentar para insertar el autor en la base de datos
  
         // UPDATE (Actualizar un autor existente)
-       Categoria categoria2 = new Categoria(1, "Ciencia Ficcion", "Categorai para libro de Ciencia Ficcion");
-       categoriaDAO.up(categoria2);  // Descomentar para actualizar el autor con ID 1
+      // Categoria categoria2 = new Categoria(1, "Ciencia Ficcion", "Categorai para libro de Ciencia Ficcion");
+       //categoriaDAO.up(categoria2);  // Descomentar para actualizar el autor con ID 1
  
         // FIND ONE (Buscar un autor por ID)
       // try {
@@ -33,7 +33,7 @@ public class CategoriaDAOPrincipal {
         //}
  
         // DELETE (Eliminar un autor por ID)
-        //categoriaDAO.del(55);  // Descomentar para eliminar el autor con ID 1
+        categoriaDAO.del(50);  // Descomentar para eliminar el autor con ID 1
  
         // FIND ALL (Obtener todos los autores)
         List<Categoria> categorias = categoriaDAO.findAll();

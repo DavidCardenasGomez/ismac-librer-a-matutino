@@ -2,14 +2,41 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "factura")
 public class Factura {
+//SQL: 1:1 <=> java: @OneToOne
+	//SQL: 1:N <=> java: @OneToMany, @ManytoOne
 	
+@Id
+@GeneratedValue(strategy =GenerationType.IDENTITY)
+@Column(name ="id_factura")
 	private int idFactura;
+@Column(name ="num_factura")
 	private String numFactura;
+@Column(name ="fecha")
 	private Date fecha;
+@Column(name ="total_neto")
 	private Double totalNeto;
-	private Double iva;
+@Column(name ="iva")
+private Double iva;
+@Column(name ="total")
+private Double total;
+
 	//private int idCliente;
+@JoinColumn(name ="id_cliente")
+@ManyToOne(cascade= {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+
 	private Cliente cliente;
 	
 	
@@ -73,6 +100,19 @@ public class Factura {
 
 	public void setIva(Double iva) {
 		this.iva = iva;
+	}
+	
+	
+	
+	
+
+	public Double getTotal() {
+		return total;
+	}
+
+
+	public void setTotal(Double total) {
+		this.total = total;
 	}
 
 
