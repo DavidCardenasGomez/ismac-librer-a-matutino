@@ -21,16 +21,16 @@ public class AutorDAOPrincipal {
         //autorDAO.add(autor);  // Descomentar para insertar el autor en la base de datos
  
         // UPDATE (Actualizar un autor existente)
-        //Autor autor2 = new Autor(1, "Julio Verne", "Verne", "EE.UU.", "New York", "98765544", "verne34@email.com");
-        //autorDAO.up(autor2);  // Descomentar para actualizar el autor con ID 1
+        Autor autor2 = new Autor(1, "Julio Verne", "Verne", "EE.UU.", "New York", "98765544", "verne34@email.com");
+        autorDAO.up(autor2);  // Descomentar para actualizar el autor con ID 1
  
         // FIND ONE (Buscar un autor por ID)
-       try {
-           Autor autor3 = autorDAO.findOne(1);  // Buscar autor con ID 1
-            System.out.println(autor3.toString());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+      // try {
+          // Autor autor3 = autorDAO.findOne(1);  // Buscar autor con ID 1
+        //    System.out.println(autor3.toString());
+       // } catch (Exception e) {
+       //     e.printStackTrace();
+      //  }
  
         // DELETE (Eliminar un autor por ID)
         //autorDAO.del(55);  // Descomentar para eliminar el autor con ID 1

@@ -18,11 +18,11 @@ public class ClienteDAOPrincipal {
 		
 		
 		//insert
-		//Cliente  cliente = new Cliente(0,"1721441036","juan","taipe","Quito0","0967107486","jtaipe@correo.com");
-		//clienteDAO.add(cliente);
+		Cliente  cliente = new Cliente(0,"1721441036","juan","taipe","Quito0","0967107486","jtaipe@correo.com");
+		clienteDAO.add(cliente);
 		// update
-		//Cliente cliente2 = new Cliente(39,"1701234666","Juan6","Taipe6","Quito","096710456","jtaipe6@correo.com");
-		//clienteDAO.up(cliente2);
+		Cliente cliente2 = new Cliente(39,"1701234666","Juan6","Taipe6","Quito","096710456","jtaipe6@correo.com");
+		clienteDAO.up(cliente2);
 		
 		//findone
 		try {

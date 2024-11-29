@@ -1,7 +1,14 @@
 package com.distribuida.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "categoria")
 public class Categoria {
- private int idCategoria;
+	 @Id // Asegúrate de marcar este atributo como la clave primaria	
+ private int id_Categoria;
  private String categoria;
  private String descripcion;
  
@@ -9,17 +16,17 @@ public class Categoria {
 
 public Categoria(int idCategoria, String categoria, String descripcion) {
 	super();
-	this.idCategoria = idCategoria;
+	this.id_Categoria = idCategoria;
 	this.categoria = categoria;
 	this.descripcion = descripcion;
 }
 
 public int getIdCategoria() {
-	return idCategoria;
+	return id_Categoria;
 }
 
 public void setIdCategoria(int idCategoria) {
-	this.idCategoria = idCategoria;
+	this.id_Categoria = idCategoria;
 }
 
 public String getCategoria() {
@@ -40,7 +47,7 @@ public void setDescripcion(String descripcion) {
 
 @Override
 public String toString() {
-	return "Categoria [idCategoria=" + idCategoria + ", categoria=" + categoria + ", descripcion=" + descripcion + "]";
+	return "Categoria [idCategoria=" + id_Categoria + ", categoria=" + categoria + ", descripcion=" + descripcion + "]";
 }
  
 }
