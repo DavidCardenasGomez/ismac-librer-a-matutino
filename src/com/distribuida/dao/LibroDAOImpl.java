@@ -9,46 +9,48 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.distribuida.entities.Factura;
+import com.distribuida.entities.Libro;
 
 @Repository
-public class FacturaDAOImpl implements FacturaDAO {
+public class LibroDAOImpl implements LibroDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override
-	@Transactional 
-	public List<Factura> findAll() {
+	@Transactional
+	public List<Libro> findAll() {
 		
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("FROM Factura", Factura.class).getResultList();
-	}
-
-	@Override
-	@Transactional 
-	public Factura findOne(int id) {
-		
-		Session session = sessionFactory.getCurrentSession();
-		return session.get(Factura.class, id); 
+		return session.createQuery("FROM Libro", Libro.class).getResultList();
 		
 	}
 
 	@Override
 	@Transactional 
-	public void add(Factura factura) {
+	public Libro findOne(int id) {
 		
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(factura);
+		return session.get(Libro.class, id); 
+	}
+
+	@Override
+	@Transactional 
+	public void add(Libro libro) {
+		
+		Session session = sessionFactory.getCurrentSession();
+		session.saveOrUpdate(libro);
+
 
 	}
 
 	@Override
 	@Transactional 
-	public void up(Factura factura) {
+	public void up(Libro libro) {
 		
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(factura);
+		session.saveOrUpdate(libro);
+
 
 	}
 

@@ -1,22 +1,43 @@
 package com.distribuida.principal;
 
-import com.distribuida.entities.Factura;
-import com.distribuida.entities.FacturaDetalle;
+import java.util.Date;
+
 import com.distribuida.entities.Libro;
+import com.distribuida.entities.Categoria;
+import com.distribuida.entities.Autor;
 
 public class LibroPrincipal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Factura factura =new Factura(1,"FAC-0001",new java.util.Date(),100.25,15.25,null);
-		Libro libro =new Libro (1, "El Quijote", "Editorial A", 300, "Primera", "Español",1995, "Un clásico de la literatura", "Dura", "123456789", 5,"Imagen1.png", "Normal", 15.99, 101, 201, null);
-
-
-		FacturaDetalle facturadetalle =new FacturaDetalle(1,3,40.50, factura, libro);
-		facturadetalle.setLibro(libro);
+		Categoria categoria = new Categoria(1,"Ciencias","Documentales e informacion");
+		Categoria categoria1 = new Categoria(2,"Deportes","Entrevistas y eventos");
+		Autor autor = new Autor(1,"Pablo","Neruda","Argentina","Buenos Aires","0999553311","pablo@gmail.com");
+		Autor autor1 = new Autor(2,"Miguel","Servantes","Bolivia","Calle Ricardo","0984466331","miguel@gmail.com");
+		
+		Libro libro = new Libro(); 
+		
+		libro.setIdLibro(1);
+		libro.setTitulo("Don quijote");
+		libro.setEditorial("Montevideo");
+		libro.setNumPaginas(13400);
+		libro.setEdicion("ilimitada");
+		libro.setIdioma("español");
+		libro.setFechaPublicacion(new Date());
+		libro.setDescripcion("Fantasia"); 
+		libro.setTipodePasta("Doble");
+		libro.setIsbn("123");
+		libro.setNumEjemplares(123555);
+		libro.setPortada("Elegante");
+		libro.setPresentacion("Fuerte");
+		libro.setPrecio(130.20);
+		
+		libro.setCategoria(categoria);
+		libro.setAutor(autor);
+		
 		System.out.println(libro.toString());
+		
 
+		}
 	}
-
-}

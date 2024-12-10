@@ -4,16 +4,17 @@ import java.util.List;
 
 import com.distribuida.entities.Factura;
 
-public interface FacturaDAO{
-	
-    List<Factura> findAll();
-	
-	 public Factura findOne(int id);
-	
-	 public void add(Factura factura);
+public interface FacturaDAO {
 
-	 public void up(Factura factura);
+	public List <Factura> findAll();
 	
-	 public void del(int id);
+	public Factura findOne(int id);
+	
+	public void add (Factura factura);
+	
+	public void up(Factura factura);
+	
+	public void del(int id);
 
+	
 }

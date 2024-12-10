@@ -33,7 +33,7 @@ public class CategoriaDAOPrincipal {
         //}
  
         // DELETE (Eliminar un autor por ID)
-        categoriaDAO.del(50);  // Descomentar para eliminar el autor con ID 1
+       // categoriaDAO.del(50);  // Descomentar para eliminar el autor con ID 1
  
         // FIND ALL (Obtener todos los autores)
         List<Categoria> categorias = categoriaDAO.findAll();
